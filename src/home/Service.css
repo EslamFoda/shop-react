@@ -1,0 +1,17 @@
+.service-icon{
+    font-size: 3rem;
+    margin-right: 1rem;
+}
+.service-box{
+    display: flex;
+    align-items: center;
+    line-height: 1.5;
+}
+.service-grid{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    padding: 2rem 5rem;
+    gap: 2rem;
+    background-color: #60bd75;
+    color: white;
+}

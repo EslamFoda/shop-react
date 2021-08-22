@@ -1,0 +1,125 @@
+.cart-overlay{
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 2000;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(17, 17, 17, 0.274);
+  
+}
+.cart{
+    background-color: white;
+    width: 22rem;
+    height: 100%;
+    position: fixed;
+    z-index: 3000;
+    right: 0;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    overflow: auto;
+    transition: all .2s ease-in-out;
+}
+.cart-top{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.11);
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: white;
+}
+
+.close-icon{
+    font-size: 21px;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+.close-icon:hover{
+    transform: rotate(180deg);
+}
+
+.single-cart-item{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    padding: 1.5rem 1rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.11);
+    gap: 1rem;
+    transition: background .3s ease-in-out;
+    overflow: auto;
+
+}
+.single-cart-item input{
+    background-color: #f9f9f900;
+}
+.single-cart-item:hover{
+    background-color: #f9f9f9;
+}
+.cart-img-container{
+    width: 100%;
+}
+.cart-img-container img{
+    width: 100%;
+}
+.cart-item-details h5{
+    font-weight: 600;
+    font-size: .9rem;
+    margin-bottom: .9rem;
+}
+.delete-icon{
+    margin-top: .9rem;
+    cursor: pointer;
+}
+.cart-checkout{
+    width: 100%;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    box-shadow: 0px -3px 2px rgba(50, 50, 50, 0.068);
+    padding: 1rem;
+}
+.cart-checkout p {
+    margin: 1rem 0 1.3rem 0;
+}
+.subtotal{
+    display: flex;
+    justify-content: space-between;
+}
+.cart-btn{
+    display: block;
+    width: 100%;
+    background-color: #f7f7f7;
+    border: none;
+    border-radius: 5rem;
+    padding: .9rem 0;
+    cursor: pointer;
+    letter-spacing: 2px;
+    transition: all .3s ease-in-out;
+    font-family: sans-serif;
+    font-weight: 500;
+}
+.green-btn{
+    background-color: #5fbd73da;
+    margin: .8rem 0;
+    color: white;
+}
+.cart-btn:hover{
+    opacity: .8;
+}
+.empty-cart{
+    text-align: center;
+    margin-top: 3rem;
+    font-weight: bold;
+    color: gray ;
+    display: flex;
+    flex-direction: column;
+    line-height: 3;
+}
+.la-shopping-bag{
+    font-size: 3rem;
+}

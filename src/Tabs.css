@@ -1,0 +1,74 @@
+.tabv2 {
+  overflow: hidden;
+  background-color: #f1f1f1;
+   display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.tabs-section{
+    background-color: #f1f1f1;
+    padding: 2rem 4rem;
+    color: #2c2b2b;
+}
+/* Style the buttons inside the tab */
+.tabv2 button {
+  border: none;
+  cursor: pointer;
+  padding: 10px 16px;
+  transition: 0.3s;
+  font-size: 16px;
+  border-radius: 5rem;
+  margin: 0rem;
+  color: #393939b4;
+  border: 1px solid #39393900;
+  
+}
+
+/* Change background color of buttons on hover */
+.tabv2 button:hover {
+  color: #393939;
+}
+
+/* Create an active/current tablink class */
+.tabv2 button.active {
+  border: 1px solid #393939;
+  color: #393939;
+}
+
+/* Style the tab content */
+.tabv2content {
+  display: none;
+  padding: 6px 12px;
+  -webkit-animation: fadeEffectv2 1s;
+  animation: fadeEffectv2 1s;
+}
+.tabv2content p {
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+.active-tabv2{
+     display: block;
+  padding: 6px 12px;
+  -webkit-animation: fadeEffectv2 1s;
+  animation: fadeEffectv2 1s;
+}
+
+/* Fade in tabs */
+@-webkit-keyframes fadeEffectv2 {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeEffectv2 {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+.svg{
+    height: 2.5rem;
+    margin-right: .3rem;
+}
+.svg-container{
+    text-align: center;
+    margin-top: 2rem;
+}

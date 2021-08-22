@@ -1,38 +1,286 @@
-.App {
-  text-align: center;
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+a{
+  text-decoration: none;
+  color: black;
+}
+:root{
+  --swiper-navigation-size: 20px !important;
+}
+.basic-4 {
+    background: 
+      linear-gradient(currentColor 0 0) 
+      var(--p, 0) 100% /var(--d, 0) 1px 
+      no-repeat;
+      transition: 0.3s, background-position 0s 0.3s;
+      display:inline-block;
+      padding-bottom:5px;
+      cursor:pointer;
+  }
+  .basic-4:hover {
+    --d: 100%;
+    --p: 100%;
+  }
+
+
+
+
+@media only screen and (max-width: 1024px) {
+  .hero-text{
+    width: 70%;
+    top: 32% !important;
+  }
+  .main-container{
+    padding: 5rem 1rem !important;
+  }
+  .btn-container{
+    transform: translate(-50%, -80%) !important;
+  }
+  .banneer-wrapper{
+    margin: 2rem !important;
+  }
+  .service-grid{
+    gap: 1.2rem !important;
+  }
+  .product-title-nav{
+  padding: 1rem 1rem !important;
+}
+.product-grid {
+   
+    padding: 2rem 1rem !important;
+    gap: 1rem !important;
+}
+.tabs-section{
+  padding: 2rem 1rem !important;
+}
+.active-tabv2{
+  padding: 6px 0 !important;
+}
+  .like-section{
+    padding: 2rem 1rem !important;
+  }
+  .tabcontent{
+    padding: 6px 0 !important;
+  }
+  .discover-grid{
+    gap:1rem !important;
+  }
+  .Blog-grid{
+    gap: 1rem !important;
+  }
+}
+@media only screen and (max-width: 928px){
+
+   html{
+    font-size: 85%;
+  }
+}
+@media only screen and (max-width: 834px){
+ 
+  .main-container{
+    padding: 3rem 1rem !important;
+}
+.faq-section{
+  padding: 4rem 2rem !important;
+}
+.service-grid{
+  padding: 2rem 3rem !important;
+}
+.btn-animation{
+  line-height: 2.5 !important;
+}
+.overview{
+  display: none !important;
+}
+.overview-media{
+  display: flex !important;
+}
+.discover-container{
+  padding: 3rem 1rem !important;
+}
+.discover-grid{
+  gap: 1rem !important;
+}
+.Blog-grid{
+  gap: 1rem !important;
+}
+.product-grid{
+  grid-template-columns: 1fr 1fr !important;
+}
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@media only screen and (max-width:768px){
+  .service-grid{
+    grid-template-columns: repeat(2,1fr) !important;
+  }
+  .faq{
+    padding: 20px !important;
+  }
+  .faq-toggle {
+    top: 17px !important;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+}
+
+@media only screen and (max-width:764px){
+  .organic-grid{
+    grid-template-columns: repeat(1,1fr) !important;
+    gap: 2rem !important;
+  }
+  .discover-grid{
+    grid-template-columns: repeat(2,1fr) !important;
+  }
+  .banner-section{
+    flex-wrap: wrap;
+  }
+  .left-banner,.right-banner{
+    width: 100%;
+  }
+  .banneer-wrapper{
+    margin: 5rem !important;
+    line-height: 2;
+  }
+  .banneer-wrapper2{
+    top: 40% !important;
+  }
+  .Blog-grid{
+    grid-template-columns: repeat(1,1fr) !important;
+  }
+  .swiper-container-horizontal > .swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+    bottom: 3px !important;
+}
+.swiper-pagination-bullet-active {
+    background: black !important;
+}
+.model-container{
+  margin: 2rem !important;
+}
+}
+@media only screen and (max-width:714px){
+.model-grid{
+  grid-template-columns: 1fr !important;
+}
+.model-container{
+  margin: 3rem !important;
+}
+.add-container{
+    margin: .5rem !important;
+  }
+  .product-order{
+    margin: .5rem !important;
+  }
+  .guranteed{
+    display: none;
+  }
+}
+@media only screen and (max-width:666px){
+  .deal-header{
+    flex-direction: column;
+    left: 10rem !important;
+  }
+  .hero-text{
+    top: 39% !important;
+  }
+  .product-grid{
+    grid-template-columns: 1fr !important;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+@media only screen and (max-width:554px){
+  .hero-header{
+    font-size: 1.8rem !important;
+  }
+  .hero-btn{
+    padding: 1rem 1.5rem !important;
+  }
+  .hero-section{
+    margin-top: 3.9rem !important;
+  }
+  .banneer-wrapper{
+    margin: 2rem !important;
+  }
+ 
+}
+@media only screen and (max-width:480px){
+  .deal-header {
+    
+    left: 5.5rem !important;
+}
+.service-grid{
+    padding: 1rem !important;
+  }
+}
+@media only screen and (max-width:414px){
+  html{
+    font-size: 76% !important;
+  }
+  .banneer-wrapper2{
+    top: 50% !important;
+  }
+  .product-grid{
+    padding: 1rem !important;
+  }
+  .faq-section {
+    padding: 3rem 1rem !important;
+}
+.buy-btn{
+  width: 70% !important;
+}
+.add-btn{
+  font-size: 1rem !important;
+  padding: .7rem .7rem !important;
+}
+.nav-links img {
+    height: 20px ;
+}
+}
+@media only screen and (max-width:375px){
+  .deal-header {
+    left: 3.5rem !important;
+}
+.cart{
+  width: 20rem !important;
+}
+.single-cart-item{
+  padding: 1rem .5rem !important;
+}
+}
+@media only screen and (max-width:360px){
+  .quantity{
+    width: 2rem !important;
+  }
+  .quantity-container {
+    padding: .1rem !important;
+  
+}
+.sponser-grid{
+  padding: 2rem !important;
+}
+.add-btn{
+  padding: .7rem .5rem !important;
+  margin: 0 .5rem !important;
+  
+}
+.right-model{
+  padding: .5rem !important;
+}
+.banneer-wrapper {
+    margin: .8rem !important;
+}
+.tabv2 button{
+  font-size: 15px !important;
+  padding: 8px 13px !important;
+}
+}
+@media only screen and (max-width:320px){
+  .hero-text {
+    top: 50% !important;
+}
+.hero-header{
+  font-size: 1.3rem !important;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }

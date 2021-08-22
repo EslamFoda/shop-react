@@ -1,0 +1,34 @@
+.Blog-grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 2rem;
+}
+.blog-img-container{
+    overflow: hidden;
+}
+.blog-box img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    transition: all .4s ease-in-out;
+}
+.blog-box:hover img{
+    transform: scale(1.1);
+}
+
+.blog-box span,.blog-box p{
+    color:#2e2e2e
+}
+.blog-header{
+    margin: .8rem 0;
+    font-size: .9rem;
+    cursor: pointer;
+    color: #2e2e2e;
+}
+.blog-header:hover{
+    color: #5fbd74;
+}
+.by-kate{
+    display: block;
+    margin: .5rem 0;
+}

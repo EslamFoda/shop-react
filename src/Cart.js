@@ -3,8 +3,7 @@ import './Cart.css'
 import { projectFirestore } from './home/firebase';
 import { Link } from 'react-router-dom';
 import ThankYou from './ThankYou';
-
-
+import { motion,AnimatePresence } from 'framer-motion';
 const Cart = ({isOpen,onClose}) => {
     const [items,setItems] = useState(null)
     const [subtotal,setSubtotal] = useState(0)
@@ -34,24 +33,39 @@ const Cart = ({isOpen,onClose}) => {
 
   
 
-    if(!isOpen) return null
+    
     return ( 
-        <div className='cart-overlay'>
+        <div>
+            <AnimatePresence>
+       {isOpen && <div className='cart-overlay'>
             <ThankYou openThank={openThank}/>
-            <div className='cart'>
+            <motion.div className='cart'
+            animate={{x: 0}}
+            initial={{x: 400}}
+            transition={{type:'tween',duration:.3}}
+            exit={{x:'100vw'}}
+            >
                 <div className='cart-top'>
                 <span>SHOPPING CART</span>
                 <span className="material-icons close-icon" onClick={onClose}>close</span>
                 </div>
                 {!items.length && 
-                <div className='empty-cart'>
+                <motion.div className='empty-cart' 
+                initial={{display:'none',opacity:0}} 
+                animate={{display:"flex",opacity:1}} 
+                transition={{delay:.3,type:'spring'}}
+                >
                     <i className="las la-shopping-bag"></i>
                     <span>Your cart is empty.</span>
-                </div>
+                </motion.div>
                 }
             {items && <div className='cart-items'>
+                <AnimatePresence >
                 {items.map(item=>
-                <div className='single-cart-item' key={item.id}>
+                <motion.div className='single-cart-item' key={item.id}
+                 exit={{opacity:0,scale:0}}
+                 transition={{duration:.3}}
+                >
                     <div className='cart-img-container'>
                     <img src={item.img} alt="" />
                     </div>
@@ -86,9 +100,10 @@ const Cart = ({isOpen,onClose}) => {
                         }}></i>
                         </div>
                     </div>
-                </div>
+                </motion.div>
                 
                 )}
+                 </AnimatePresence>
             </div>}
                 <div className='cart-checkout'>
                     <div className='subtotal'>
@@ -116,7 +131,9 @@ const Cart = ({isOpen,onClose}) => {
                     }}>CHECK OUT</button>
                 </div>
            
-            </div>
+            </motion.div>
+        </div>}
+            </AnimatePresence>
         </div>
      );
 }

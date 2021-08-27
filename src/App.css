@@ -236,6 +236,12 @@ a{
 .nav-links img {
     height: 20px ;
 }
+.faq-toggle{
+  right: 20px !important;
+}
+.hero-header {
+    font-size: 1.5rem !important;
+}
 }
 @media only screen and (max-width:375px){
   .deal-header {

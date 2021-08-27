@@ -6,9 +6,11 @@
     right: 0;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 111110000;
+    padding: 2rem;
 }
 .thank-container{
-    width: max-content;
+    width: fit-content;
+    min-width: 20rem;
     padding: 3rem;
     margin: 5rem auto;
     background: #60bd75;

@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.css';
+import { motion,AnimatePresence } from 'framer-motion';
 import SwiperCore, { Navigation, A11y } from 'swiper';
 import Cart from './Cart'
 SwiperCore.use([Navigation, A11y]);
@@ -131,8 +132,15 @@ const ViewJuice = () => {
         </SwiperSlide>
     ) }
     </Swiper>}
-     {openModel && <div className='model-overlay'>
-            <div className='model-container'>
+    <AnimatePresence>
+
+     {openModel && <motion.div className='model-overlay' exit={{opacity:0}}>
+            <motion.div className='model-container'
+             initial={{scale:.5,opacity:0}}
+            animate={{scale:1,opacity:1}}
+            transition={{type:'spring',duration:.5}}
+            exit={{scale:.5,opacity:0}}
+            >
               <span className="material-icons-outlined close-model" style={{cursor:'pointer'}} onClick={()=> setOpenModel(false)}>close</span>
               <div className='model-grid'>
                 <div className='left-model'>
@@ -141,7 +149,9 @@ const ViewJuice = () => {
                 <div className='right-model'>
                       <div className='product-details'>
                     <h1 className='deal-title product-title'>{item.title}</h1>
+                    <div>
                     <h3 className='deal-title product-price'>${item.price}.00</h3>
+                    </div>
                     <p>This beautifully coloured jam uses the best blueberries to achieve a full, fruity flavour. Ingredients: Sugar, Blueberries, Pectin, Citric Acid, Sodium Citrate. Organic food is food produced by methods that comply with...</p>
                     </div>
                     <div className='add-container-wrapper'>
@@ -186,8 +196,9 @@ const ViewJuice = () => {
                     </div>
                 </div>
               </div>
-            </div>
-          </div>}
+            </motion.div>
+          </motion.div>}
+             </AnimatePresence>
         </div>
      );
 }

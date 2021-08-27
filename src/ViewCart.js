@@ -4,6 +4,7 @@ import { useEffect,useState } from 'react';
 import Footer from './Footer'
 import Viewed from './Viewed'
 import ThankYou from './ThankYou';
+import { motion,AnimatePresence } from 'framer-motion';
 const ViewCart = () => {
     const [items,setItems] = useState(null)
     const [subtotal,setSubtotal] = useState(0)
@@ -47,14 +48,22 @@ const ViewCart = () => {
                     </div>
                 </div>
                   {!items.length && 
-                <div className='empty-cart'>
+                <motion.div className='empty-cart' 
+                initial={{display:'none',opacity:0,x:60}} 
+                animate={{display:"flex",opacity:1,x:0}} 
+                transition={{delay:.5,type:'spring'}}
+                >
                     <i className="las la-shopping-bag"></i>
                     <span>Your cart is empty.</span>
-                </div>
+                </motion.div>
                 }
                 {items && <div>
+                    <AnimatePresence>
                     {items.map(item=>
-                    <div className='single-list-item' key={item.id}>
+                    <motion.div className='single-list-item' key={item.id}
+                     exit={{x:-300,opacity:0}}
+                     transition={{duration:.5}}
+                    >
                         <div className='product-list-wrapper'>
                         <div className='list-img-container'>
                             <img src={item.img} alt="" />
@@ -94,8 +103,9 @@ const ViewCart = () => {
                         <div className='cart-list-total'>
                             <h5>${item.totla}.00</h5>
                         </div>
-                    </div>
+                    </motion.div>
                     )}
+                    </AnimatePresence>
                 </div>}
                 <div className='Checkout-cart-container'>
                     <div className='subtotal-cart'>

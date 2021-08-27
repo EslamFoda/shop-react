@@ -4,7 +4,7 @@ import { Link, useHistory } from 'react-router-dom';
 import Cart from '../Cart';
 import './Discover.css'
 import Loading from '../Loading';
-
+import { motion,AnimatePresence } from 'framer-motion';
 const Discover = () => {
   const history = useHistory()
   const [product,setProduct] = useState(null)
@@ -544,8 +544,16 @@ useEffect(()=>{
     ) }
       </div>} 
 </div>
-{openModel && <div className='model-overlay'>
-            <div className='model-container'>
+<AnimatePresence>
+
+
+{openModel && <motion.div className='model-overlay' exit={{opacity:0}}>
+            <motion.div className='model-container'
+            initial={{scale:.5,opacity:0}}
+            animate={{scale:1,opacity:1}}
+            transition={{type:'spring',duration:.5}}
+             exit={{scale:.5,opacity:0}}
+            >
               <span className="material-icons-outlined close-model" style={{cursor:'pointer'}} onClick={()=> setOpenModel(false)}>close</span>
               <div className='model-grid'>
                 <div className='left-model'>
@@ -554,7 +562,9 @@ useEffect(()=>{
                 <div className='right-model'>
                       <div className='product-details'>
                     <h1 className='deal-title product-title'>{product.title}</h1>
+                    <div>
                     <h3 className='deal-title product-price'>${product.price}.00</h3>
+                    </div>
                     <p>This beautifully coloured jam uses the best blueberries to achieve a full, fruity flavour. Ingredients: Sugar, Blueberries, Pectin, Citric Acid, Sodium Citrate. Organic food is food produced by methods that comply with...</p>
                     </div>
                     <div className='add-container-wrapper'>
@@ -609,8 +619,9 @@ useEffect(()=>{
                     </div>
                 </div>
               </div>
-            </div>
-          </div>}
+            </motion.div>
+          </motion.div>}
+          </AnimatePresence>
           {!all && <Loading />}
         </div>
      );

@@ -213,7 +213,7 @@ const Deal = () => {
                           setIsOpen(true)
                           
                         }}>ADD TO CART</button>
-                        <span className="material-icons quantity-fav">favorite_border</span>
+                        <span className="material-icons-outlined quantity-fav">favorite_border</span>
                     </div>
 
                     <div className='buy-container'>

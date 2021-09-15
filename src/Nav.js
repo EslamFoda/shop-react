@@ -28,7 +28,7 @@ const Nav = () => {
                 <span className='blog-icon' style={{cursor:'pointer'}}>Blog</span>
                 </div>
                 <div className='nav-icons'>
-                    <span className="material-icons">favorite_border</span>
+                    <span class="material-icons-outlined">favorite_border</span>
                     <div className='cart-icon-container'>
                     <span className="material-icons-outlined cart-icon" style={{cursor:'pointer'}} onClick={()=> setIsOpen(true)}>shopping_cart</span>
                     {items && <span className='cart-quantity'>{items.length}</span>}

@@ -73,7 +73,7 @@ const AllDetails = () => {
                             </div>
                         </div>
                         <button className='add-btn' onClick={handleAdd}>ADD TO CART</button>
-                        <span className="material-icons quantity-fav">favorite_border</span>
+                        <span className="material-icons-outlined quantity-fav">favorite_border</span>
                     </div>
 
                     <div className='buy-container'>

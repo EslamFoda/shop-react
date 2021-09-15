@@ -47,7 +47,7 @@ const Cart = ({isOpen,onClose}) => {
             >
                 <div className='cart-top'>
                 <span>SHOPPING CART</span>
-                <span className="material-icons close-icon" onClick={onClose}>close</span>
+                <span className="material-icons-outlined close-icon" onClick={onClose}>close</span>
                 </div>
                 {!items.length && 
                 <motion.div className='empty-cart' 

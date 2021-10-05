@@ -1,6 +1,6 @@
-.faq-section h1{
-    text-align: center;
-    margin-bottom: .8rem;
+.faq-section h1 {
+  text-align: center;
+  margin-bottom: 0.8rem;
 }
 .faq-container {
   max-width: 800px;
@@ -25,8 +25,8 @@
 
 .faq.active::before,
 .faq.active::after {
-  content: '\f075';
-  font-family: 'Font Awesome 5 Free';
+  content: "\f075";
+  font-family: "Font Awesome 5 Free";
   color: #cc2e6b;
   font-size: 7rem;
   position: absolute;
@@ -85,11 +85,11 @@
   color: #60bd75;
   display: block;
 }
-.fa-chevron-down{
-    background-color: #60bd75;
-    color: white;
-    border-radius: 50%;
-    padding: .5rem;
+.fa-chevron-down {
+  background-color: #60bd75;
+  color: white;
+  border-radius: 50%;
+  padding: 0.5rem;
 }
 .faq.active .faq-toggle .fa-chevron-down {
   display: none;
@@ -98,12 +98,11 @@
 .faq.active .faq-toggle {
   background-color: #ffffff;
 }
-.faq-section{
-    background-image: url('https://cdn.shopify.com/s/files/1/0270/2098/4401/files/organic-banner-2_1512x.jpg?v=1592902326');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    padding: 5rem;
-    background-attachment: fixed;
-    
+.faq-section {
+  background-image: url("https://cdn.shopify.com/s/files/1/0270/2098/4401/files/organic-banner-2_1512x.jpg?v=1592902326");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 5rem;
+  background-attachment: fixed;
 }

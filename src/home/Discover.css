@@ -1,21 +1,19 @@
-.discover-header{
-    margin-bottom: 2rem;
+.discover-header {
+  margin-bottom: 2rem;
 }
-.discover-grid{
+.discover-grid {
   display: grid;
-  grid-template-columns: repeat(4,1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
 }
 .tab {
-  
   display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 1rem;
-  
 }
-.slash{
-  margin: 0 .6rem;
+.slash {
+  margin: 0 0.6rem;
 }
 /* Style the buttons inside the tab */
 .tab button {
@@ -26,27 +24,25 @@
   transition: 0.3s;
   font-size: 17px;
   color: #2e2e2eb1;
-  background: 
-      linear-gradient(#60bd75 0 0) 
-      var(--p, 0) 100% /var(--d, 0) 2px 
-      no-repeat;
-      transition: 0.3s, background-position 0s 0.3s;
-      display:inline-block;
-      padding-bottom: 2px;
-      cursor:pointer;
+  background: linear-gradient(#60bd75 0 0) var(--p, 0) 100% / var(--d, 0) 2px
+    no-repeat;
+  transition: 0.3s, background-position 0s 0.3s;
+  display: inline-block;
+  padding-bottom: 2px;
+  cursor: pointer;
 }
 
 /* Change background color of buttons on hover */
 .tab button:hover {
   --d: 100%;
-    --p: 100%;
-    color: black;
+  --p: 100%;
+  color: black;
 }
 
 /* Create an active/current tablink class */
 .tab button.active {
   --d: 100%;
-    --p: 100%;
+  --p: 100%;
   color: #60bd75;
 }
 
@@ -57,8 +53,8 @@
   -webkit-animation: fadeEffect 1s;
   animation: fadeEffect 1s;
 }
-.active-tab{
-     display: block;
+.active-tab {
+  display: block;
   padding: 6px 12px;
   -webkit-animation: fadeEffect 1s;
   animation: fadeEffect 1s;
@@ -67,24 +63,22 @@
 /* Fade in tabs */
 @-webkit-keyframes fadeEffect {
   from {
-      transform: translateY(3rem);
-      opacity: 0;
-    }
+    transform: translateY(3rem);
+    opacity: 0;
+  }
   to {
-      transform: translateY(0);
-       opacity: 1;
-      
-    }
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 @keyframes fadeEffect {
   from {
-      transform: translateY(3rem);
-      opacity: 0;
-    }
+    transform: translateY(3rem);
+    opacity: 0;
+  }
   to {
-      transform: translateY(0);
-      opacity: 1;
-     
-    }
+    transform: translateY(0);
+    opacity: 1;
+  }
 }

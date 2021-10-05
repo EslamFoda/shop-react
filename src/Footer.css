@@ -1,96 +1,85 @@
-.logo{
-    margin-bottom: 1rem;
-    height: 25px;
+.logo {
+  margin-bottom: 1rem;
+  height: 25px;
 }
-.footer-icons img{
-    width: 1rem;
-    height: 1rem;
+.footer-icons img {
+  width: 1rem;
+  height: 1rem;
 }
-.footer-top{
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    gap: 1rem;
-    background: #f5f3f0;
-    
+.footer-top {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  background: #f5f3f0;
 }
-.footer-box-left{
-    padding: 2rem 1rem;
+.footer-box-left {
+  padding: 2rem 1rem;
+  line-height: 1.5;
+}
+.footer-icons {
+  margin: 2rem 0;
+}
+.footer-icons img {
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
+.footer-box {
+  padding: 0 1.5rem;
+  padding: 3rem 1rem;
+}
+.footer-box h5 {
+  transition: all 0.3s ease;
+  width: fit-content;
+  margin: 0.9rem 0;
+}
+.footer-box h5:hover {
+  cursor: pointer;
+  color: #5fbd74;
+}
+.footer-line {
+  width: 2rem;
+  height: 1px;
+  background-color: #5fbd74;
+  margin: 0.5rem 0 1.5rem 0;
+}
+.myName {
+  color: gray;
+  cursor: pointer;
+}
+.myName:hover {
+  border-bottom: 1px solid #5fbd74;
+}
+.vue {
+  color: rgb(20, 199, 136);
+}
+.footer-bottom {
+  padding: 2rem 1rem;
+}
+@media only screen and (max-width: 596px) {
+  .footer-top {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+  }
+  .footer-box-left {
+    padding: 0.5rem 1rem;
     line-height: 1.5;
-}
-.footer-icons{
-    margin: 2rem 0;
-}
-.footer-icons img{
-    margin-right: 1rem;
-    cursor: pointer;
-}
-
-.footer-box{
-    padding: 0 1.5rem;
-    padding: 3rem 1rem;
-}
-.footer-box h5{
-    transition: all .3s ease;
-    width: fit-content;
-    margin: .9rem 0;
-}
-.footer-box h5:hover{
-    cursor: pointer;
-    color: #5fbd74;
-}
-.footer-line{
-    width: 2rem;
-    height: 1px;
-    background-color: #5fbd74;
-    margin: .5rem 0 1.5rem 0;
-}
-.myName{
-    color: gray;
-    cursor: pointer;
-}
-.myName:hover{
-    border-bottom: 1px solid #5fbd74;
-
-}
-.vue{
-    color: rgb(20, 199, 136);
-}
-.footer-bottom{
-    padding: 2rem 1rem;
-}
-@media only screen and (max-width: 596px){
-   
-    
-    .footer-top{
-        grid-template-columns: repeat(2,1fr);
-        gap: 0;
-    }
-    .footer-box-left{
-        padding: .5rem 1rem;
-        line-height: 1.5;
-    }
-    .footer-box{
-        padding: 1rem;
-    }
-    .footer-bottom{
-        padding: 1rem;
-    }
+  }
+  .footer-box {
+    padding: 1rem;
+  }
+  .footer-bottom {
+    padding: 1rem;
+  }
 }
 @media only screen and (max-width: 414px) {
-  
-
-
-.footer-bottom p {
-    font-size: .8rem;
+  .footer-bottom p {
+    font-size: 0.8rem;
+  }
 }
 
-
-}
-
-@media only screen and (max-width: 320px){
-  
-    .footer-box-left p {
-        font-size: .8rem;
-    }
-  
+@media only screen and (max-width: 320px) {
+  .footer-box-left p {
+    font-size: 0.8rem;
+  }
 }

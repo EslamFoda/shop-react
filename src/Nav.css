@@ -1,55 +1,54 @@
 nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem;
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 100%;
-    background-color: white;
-    z-index: 1000;
-    box-shadow: 0 0 .3rem rgba(0, 0, 0, 0.192);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  background-color: white;
+  z-index: 1000;
+  box-shadow: 0 0 0.3rem rgba(0, 0, 0, 0.192);
 }
 .nav-links img {
-    height: 25px;
+  height: 25px;
 }
-.nav-links{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex:0 20rem;
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: 0 20rem;
 }
-.nav-icons{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex: 0 10rem;
+.nav-icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex: 0 10rem;
 }
-.cart-icon-container{
-    position: relative;
-    display: flex;
-    align-items: center;
-    
+.cart-icon-container {
+  position: relative;
+  display: flex;
+  align-items: center;
 }
-.cart-icon{
-    transition: all .2s ease-in-out;
+.cart-icon {
+  transition: all 0.2s ease-in-out;
 }
-.cart-icon-container:hover :first-child{
-    color: #60bd75;
+.cart-icon-container:hover :first-child {
+  color: #60bd75;
 }
-.cart-quantity{
-    position: absolute;
-    background-color: black;
-    color: white;
-    height: 1.2rem;
-    width: 1rem;
-    top: -.5rem;
-    right: -.5rem;
-    font-size: smaller;
-    text-align: center;
-    border-radius: 50%;
+.cart-quantity {
+  position: absolute;
+  background-color: black;
+  color: white;
+  height: 1.2rem;
+  width: 1rem;
+  top: -0.5rem;
+  right: -0.5rem;
+  font-size: smaller;
+  text-align: center;
+  border-radius: 50%;
 }
-.blog-icon{
-    padding-right: .5rem;
+.blog-icon {
+  padding-right: 0.5rem;
 }
